@@ -16,7 +16,10 @@ for i in range(0,loops):
 
 
 for x in tanscript:
-    print(f'{x[0]} {x[1]}  {x[2]}  {x[3]}')
+    print(f'''dept.:{x[0]}
+number: {x[1]}  
+title: {x[2]}  
+Grade: {x[3]}''')
 
 
 print(tanscript)
