@@ -6,7 +6,7 @@ tanscript = []
 loops = int(input('How Many courses did you take last semester?? \t'))
 
 for i in range(0,loops):
-    print('')
+    print(f'Enter data for course {i+1}')
     dept = input('Dept.\t')
     course_num = int(input('Course Number:\t'))
     class_name = input('Class Name:\t')
