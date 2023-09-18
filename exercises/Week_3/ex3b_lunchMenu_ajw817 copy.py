@@ -13,22 +13,30 @@ h - $6.00 Soup of the Day
       ''')
 
 selection = input("What would you like for lunch? ")
-print('') # 
-if selection.lower() == 'a':
+print('') 
+if selection == 'a':
     print("You Ordered the Hamburger Special\nThat will be $9.50 please")
-elif selection.lower() == 'b':
+
+elif selection == 'b':
     print("You Ordered the Shrimp and Grits\nThat will be $7.75 please")
-elif selection.lower() == 'c':
+
+elif selection == 'c':
     print("You Ordered the Sassy Salad\nThat will be $6.75 please")
-elif selection.lower() == 'd':
+
+elif selection == 'd':
     print("You Ordered the Chicken Croissant\nThat will be $8.25 please")
-elif selection.lower() == 'e':
+
+elif selection == 'e':
     print("You Ordered the Falafel Plate\nThat will be $7.50 please")
-elif selection.lower() == 'f':
+
+elif selection == 'f':
     print("You Ordered the Pita and Hummus\nThat will be $6.15 please")
-elif selection.lower() == 'g':
+
+elif selection == 'g':
     print("You Ordered the Fresh Sushi\nThat will be $9.25 please")
-elif selection.lower() == 'h':
+
+elif selection == 'h':
     print("You Ordered the Soup of the Day\nThat will be $6.00 please")
+
 else:
     print('That is not a valid option')
