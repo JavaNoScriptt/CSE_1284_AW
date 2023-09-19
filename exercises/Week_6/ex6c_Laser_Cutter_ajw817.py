@@ -6,7 +6,7 @@ turt.title('Hwk 6c Laser Cutter ajw817')
 turt.screensize(800,600)
 
 # has a list of cordinates for the turtle to move through
-cord_hex =[]
+cord_hex =[(-325,275),(-325,175),(-325,75),(-325,-25),(-325,-125)]
 #different shapes have a different 
 cord_penta = [] 
 
@@ -23,12 +23,12 @@ def draw(sides):
         t.pencolor('Blue') 
     # main part of the program where the sides are drawn
     for i in range(0,sides):
-        t.forward(40) # could make this apart of the function requirements to add more functionalitys
-        t.left(angle)
+        t.forward(45) # could make this apart of the function requirements to add more functionalitys
+        t.right(angle)
         
+#Draws all of the hexagons
 for i in cord_hex:
-    print('hex')
-teleport(-275,250)
-draw(6)
-print(turt.ycor(), turt.xcor())
-print(cord_list)
+    teleport(i[0],i[1])
+    draw(6)
+    
+
