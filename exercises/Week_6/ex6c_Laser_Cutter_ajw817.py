@@ -6,7 +6,7 @@ turt.title('Hwk 6c Laser Cutter ajw817')
 turt.screensize(800,600)
 
 # has a list of cordinates for the turtle to move through
-cord_hex =[(-325,275),(-325,175),(-325,75),(-325,-25),(-325,-125)]
+cord_hex =[(-325,275),(-325,175),(-325,75),(-325,-25),(-325,-125),(-225,300),(-225,200),(-225,100),(-225,0),(-225,-100)]
 #different shapes have a different 
 cord_penta = [] 
 
