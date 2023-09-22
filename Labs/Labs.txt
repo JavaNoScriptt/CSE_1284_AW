@@ -1,3 +1,66 @@
 Lab 1:
 
-The main objective is to take what is learned in weeks 0-2 and put it into practice. 
+The main objective is to take what is learned in weeks 0-2 and put it into practice. Which is 
+
+
+Problem statement:
+
+You work for a mapping software company. You have been tasked with showing someone a small map of the houses on their street.
+All houses on the street have house numbers that are three digits long, ie. 300, 508, 471. All street run east/west (horizontal).
+All houses with even numbers are on one side of the street (could be north or south). 
+All houses with odd numbers are across the street on the other side (could be south or north). 
+House numbers to the west (left) decrease by 2. House numbers increase by 2 to the east (right).
+ A house to the south has a house number 1 higher than a house to the north.
+
+Sample run: 
+'
+enter house number:   500
+enter street address: Cherry Lane
+These are your neighbors' addresses on Cherry Lane
+You are at the *
+  _       _       _
+ / \     / \     / \
+/   \   / * \   /   \
+|___|   |___|   |___|
+ 498     500     502
+  _       _       _
+ / \     / \     / \
+/   \   /   \   /   \
+|___|   |___|   |___|
+ 499     501     503
+'
+
+
+Lab 2:
+
+The objective is to learn from weeks 3-5. 
+
+
+Problem statemnt:
+
+Create the design for determining if a point is inside, on, or outside of the rectangle. 
+Drawing out the rectangle and labeling the coordinates of all points will help you to visualize the problem. 
+
+Test example:
+'
+Enter the x coordinate for the lower left corner of the rectangle:    1
+Enter the y coordinate for the lower left corner of the rectangle:    1
+
+Enter the width of the rectangle:    5
+Enter the height of the rectangle:    3
+
+Enter the x coordinate of the point:    2
+Enter the y coordinate of the point:    1
+On the rectangle
+'
+
+Lab 3:
+Objective is to use math to determine different outcomes. 
+Problem Statement: 
+To complete this week's lab, you will be given 3 inputs which represent a possible triangle, 
+and you need to determine if those three inputs would construct a right triangle. If the 3 sides do not form a right triangle, 
+then you will need to determine if they form a triangle at all. 
+You will not know which input of the three given is the measurement of the longest side, however.
+
+The formula to determine if 3 lengths form a right triangle is to see if the short side squared + 
+the other short side squared equals the long side squared.
