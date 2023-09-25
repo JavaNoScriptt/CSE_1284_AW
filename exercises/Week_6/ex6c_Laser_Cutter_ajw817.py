@@ -12,6 +12,7 @@ cord_hex =[(-325,275),(-325,175),(-325,75),(-325,-25),(-325,-125),(-325,-225),
 cord_penta = [(-25,50),(-25,-50),
               (75,300),(75,200),(75,100),(75,0),(75,-100),(75,-200),
               (175,300),(175,200),(175,100),(175,0),(175,-100),(175,-200)] 
+master_list =[]
 # Makes a function to bring the turtle to somewhere without pens
 def teleport(x,y):
     turt.penup()
@@ -19,6 +20,7 @@ def teleport(x,y):
     turt.pendown()
 #This is a way to make shapes with a function
 def draw(sides):
+
     angle = int(360/sides) # gets the interior angle of the shape
     if sides == 5: # for the different colors
         turt.pencolor('Black')
@@ -26,6 +28,7 @@ def draw(sides):
         turt.pencolor('Blue') 
     # main part of the program where the sides are drawn
     for i in range(0,sides):
+        master_list.append([turt.xcor(),turt.ycor()])
         turt.forward(45) # could make this apart of the function requirements to add more functionalities
         turt.right(angle)
 
@@ -40,3 +43,4 @@ for i in cord_penta:
     teleport(i[0],i[1])
     draw(5)
 
+print(master_list)
