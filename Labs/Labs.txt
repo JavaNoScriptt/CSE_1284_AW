@@ -73,3 +73,21 @@ Sample run:
 4
 These lengths form a right triangle
 '
+
+
+
+Lab 4:
+
+Objective is to practice going over loops and list. 
+
+Problem statement: 
+Given a line of text as input, output the number of characters excluding spaces, periods, exclamation points, or commas. 
+
+
+Sample Run:
+
+'
+Listen, Mr. Jones, calm down.
+
+21
+'
