@@ -64,3 +64,12 @@ You will not know which input of the three given is the measurement of the longe
 
 The formula to determine if 3 lengths form a right triangle is to see if the short side squared + 
 the other short side squared equals the long side squared.
+
+Sample run:
+
+'
+3
+5
+4
+These lengths form a right triangle
+'

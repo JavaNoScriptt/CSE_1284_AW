@@ -26,7 +26,7 @@ def draw(sides):
         turt.pencolor('Blue') 
     # main part of the program where the sides are drawn
     for i in range(0,sides):
-        turt.forward(45) # could make this apart of the function requirements to add more functionalitys
+        turt.forward(45) # could make this apart of the function requirements to add more functionalities
         turt.right(angle)
 
         
