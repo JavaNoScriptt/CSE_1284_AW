@@ -9,14 +9,12 @@ def main():
     tblMax = int(input('Table maximum bet: '))
     bet = tblMin
     tot_spins = 0
-    win = True
     print(f'Starting Money: {money}')
     while money >0 and money < profitGoal:
         
         spin = random.randint(0,36)
         if bet > money:
                 bet = tblMin
-        
         #print(spin, money, bet, win)     
         if spin%2==1:
             money+=bet
@@ -38,20 +36,10 @@ def main():
         
         tot_spins +=1
 
-
-
-
     if money <=0:
         print('You ran out of money')
     else:
         print(f'You reached your goal and beat the casino. You should stop now. You have ${money}.')
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
