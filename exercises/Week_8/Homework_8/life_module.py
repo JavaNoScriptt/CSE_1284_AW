@@ -49,16 +49,22 @@ def gridToString( grid ):
     # create an empty string
     bruh = ''
     # for each row in the grid, convert that row
-    
+    for i in grid:
         # for each cell in the row, convert the cell
-        
+        for x in i:
             # add symbol to the string for this cell
             #   symbol + for cells that hold a zero
+            if x == 0:
+                bruh +='+'
             #   letter O for cells that are non-zero
+            else:
+                bruh += 'O'
             
         # add a newline to the string at the end of the grid row
+        bruh += '\n'
         
     # return the string representation of the grid
+    return bruh
 
 # -------------------------------------------------------------------------
 
@@ -91,12 +97,12 @@ def gridSwap():
     # indicate which global variables this function needs to alter
     global gridCurrent
     # TODO - you also need to alter the global variable gridPrevious
-    
+    global gridPrevious
     # TODO - swap gridCurrent with gridPrevious
     #
     # HINT: Do NOT swap individual cell values! That's inefficient!
     #       Just swap the references to the whole 2D grids.
-    
+    gridPrevious , gridCurrent = gridCurrent, gridPrevious
     # this function does not return anything,
     # this return statement just ends the function
     return
@@ -146,21 +152,29 @@ def countLiveNeighbors( grid, rowIndex, columnIndex ):
 
 
     # TODO - Find the number of grid rows (HINT: use the len() of the grid)
-
+    rows = len(grid)
     # TODO - Find the number of grid columns (HINT: use the len() of the first row)
-
+    columns = len(grid[0])
 
     # TODO - Compute neighbor indices.
     #        Make sure all indices are positive!
     #        Make sure all indices are not too large!
+    upperL = grid[rowIndex-1][columnIndex-1]
+    middleL =  grid[rowIndex][columnIndex-1]
+    lowerL = grid[(rowIndex+1)%rows][columnIndex-1]
+    upperM = grid[rowIndex-1][columnIndex]
+    lowerM = grid[(rowIndex+1)%rows][columnIndex]
+    upperR  =grid[rowIndex-1][(columnIndex+1)%columns]
+    middleR  =grid[rowIndex][(columnIndex+1)%columns]
+    lowerR  =grid[(rowIndex+1)%rows][(columnIndex+1)%columns]
 
 
     # TODO - Count the number of live neighbors.
     #        Do NOT count the cell in the middle, only neighbors!
-
+    ans = upperL + upperM + upperR + middleL + middleR + lowerL + lowerM + lowerR
 
     # TODO - Return the number of live neighbors
-
+    return ans
 # -------------------------------------------------------------------------
 
 # Write the body of the gridUpdate function.
