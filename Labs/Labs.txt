@@ -91,3 +91,39 @@ Listen, Mr. Jones, calm down.
 
 21
 '
+
+
+Lab 4:
+ Problem statement: Given a line of text as input, output the number of characters excluding spaces, periods, exclamation points, or commas. 
+
+ Sample run:
+ input: "Listen, Mr. Jones, calm down."
+ output: 21
+
+
+
+Lab 5:
+  Problem statement: Write a computer program that simulates the gambling game Roulette. 
+  In addition to creating the game, you will need to implement a gambling strategy called the "Martingale Strategy."
+
+  Notes: 0 is not considered even for this excersize. The only way that the program 'bets' is on odds.
+  There is nothing to do with Blacks/Reds/Greens or the range of the number.
+
+  Sample Run:
+  '
+  Profit Goal: 1500
+  Starting money: 1000
+  Table minimum bet: 25
+  Table maximum bet: 300
+  Spin: 16. You lost $25 on the bet. You had 100. Now you have 75 left.
+  Spin: 22. You lost $50 on the bet. You had 75. Now you have 25 left.
+  Spin: 33. You won $25 on the bet. You had 25. Now you have 50 left.
+  Spin: 1. You won $25 on the bet. You had 50. Now you have 75 left.
+  Spin: 29. You won $25 on the bet. You had 75. Now you have 100 left.
+  Spin: 15. You won $25 on the bet. You had 100. Now you have 125 left.
+  Spin: 3. You won $25 on the bet. You had 125. Now you have 150 left.
+  You reached your goal and beat the casino. You should stop now. You have $150.
+  '
+
+
+Lab 6:

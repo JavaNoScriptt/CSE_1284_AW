@@ -30,11 +30,10 @@ import life_module
 # a vertical blinker.
 
 # horizontal blinker in the previous grid
-life_module.gridPrevious = [[0,0,0,0,0],
-                            [0,0,0,0,0],
-                            [0,1,1,1,0],
-                            [0,0,0,0,0],
-                            [0,0,0,0,0]]
+life_module.gridPrevious = [[1,0,0,0,0],
+[0,0,0,0,0],
+[1,0,0,0,0],
+[1,0,0,0,0]]
 
 # put just zeros in the current grid for now
 life_module.gridCurrent = [[0,0,0,0,0],
