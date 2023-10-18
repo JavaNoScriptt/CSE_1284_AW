@@ -42,10 +42,10 @@ def printPoints(xs, ys):
         The purpose of this function is so that the XY-Coordinate pairs could be copied and
         pasted into the website desmos.com so that you can visualize the data points.
     """
-    string = 'x\ty'
+    string = f'x\ty\n'
     
     for i in range(len(xs)):
-        string += f'\n{xs[i]}\t{ys[i]}'
+        string += f'{xs[i]}\t{ys[i]}\n'
     
     return string
 
@@ -60,9 +60,15 @@ def separatePointsList(points):
         xs = [1,1,2,3]
         ys = [1,2,3,4]
     """
+
+    xs, ys = [], []
     
-    xs = points[::2]
-    ys = points[1::2]
+    for i in range(len(points)):
+        if (i % 2 == 0):
+            xs.append(int(points[i]))
+        else:
+            ys.append(int(points[i]))
+   
     return(xs,ys)
 
 
@@ -80,23 +86,25 @@ def computeRegression(points):
     """
     avgX =0
     avgY = 0
-    
-    xs,ys = separatePointsList(points)
-    for i in range(len(xs)):
-        avgX += int(xs[i])
-        avgY += float(ys[i])
-    n = len(points)
     upperSig = 0
     lowerSig = 0
-    for i in range(len(xs)):
-        upperSig += int(xs[i])* float(ys[i])
-        lowerSig += int(xs[i]) * int(xs[i])
-    m = (upperSig-(n*avgX*avgY))/(lowerSig-(n*avgX*avgX))
+    n = len(points)//2
+    xs,ys = separatePointsList(points)
+    
+    for i in range(n):
+        avgX += xs[i]
+        avgY += ys[i]
+        upperSig += xs[i] * ys[i]
+        lowerSig += xs[i]**2
+    avgX /=n
+    avgY /=n
+    m = (upperSig-n*avgX*avgY)/(lowerSig-n*avgX**2)
     b = -m*avgX + avgY
-    return f'y={m}*x {b}'
+    return f'y = {m:.2f}*x {b:.2f}'
     
 if __name__ == "__main__":
     p = generateRandomPointsWithTrend(input("y = (enter the rest of the equation)"), int(input("Number of points")), int(input("Tolerance: ")))
+    #p = [1,2,3,4,5,6,7,8,9,10]
     xs, ys = separatePointsList(p)
     print(printPoints(xs, ys))
     print("line of regression", computeRegression(p))
