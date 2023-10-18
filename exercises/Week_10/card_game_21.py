@@ -97,11 +97,12 @@ Card = namedtuple('CARD',['suit','value','rank'])
 
 # TODO - write the create_card_deck function
 def create_card_deck():
+    iter = 1
     for x in range(len(SUITS)):
          for i in range(len(RANKS)):
-             print(x,i)
+             card_deck.add(Card(f'Card{iter}',[SUITS[x],VALUES[i],RANKS[i]]))
 
-create_card_deck()
+
 
 # ----------------------------------------------------------------------
 
