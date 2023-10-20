@@ -79,7 +79,7 @@ player_cards = []    # do not modify this line
 # DO NOT MODIFY ABOVE THIS LINE
 # ------------------------------------------------------------------
 from collections import namedtuple
-
+from random import randint
 # Card type
 #   suit:  (str) heart symbol, diamond symbol, club symbol, spade symbol
 #   value: (int) 1-13  Ace is 1, Jack is 11, Queen is 12, King is 13
@@ -90,18 +90,17 @@ from collections import namedtuple
 #
 
 # TODO - create the Card data type
-Card = namedtuple('CARD',['suit','value','rank'])
+Card = namedtuple('Card',['suit','value','rank'])
 
 
 # ----------------------------------------------------------------------
 
 # TODO - write the create_card_deck function
 def create_card_deck():
-    iter = 1
     for x in range(len(SUITS)):
          for i in range(len(RANKS)):
-             card_deck.add(Card(f'Card{iter}',[SUITS[x],VALUES[i],RANKS[i]]))
-
+            card_deck.add(Card('Card',[SUITS[x],VALUES[i],RANKS[i]]))
+            
 
 
 # ----------------------------------------------------------------------
@@ -118,7 +117,10 @@ def create_card_deck():
 
 # TODO - write the shuffle_card_deck function
 def shuffle_card_deck():
-    print('wtf')
+    global card_deck
+    times = randint(1,52)
+
+    
 
 
 # ----------------------------------------------------------------------
@@ -133,6 +135,7 @@ def shuffle_card_deck():
 
 # TODO - write the card_to_string function
 
+    
 
 
 # ----------------------------------------------------------------------
@@ -165,6 +168,8 @@ def shuffle_card_deck():
 
 # TODO - write the total_cards_for_21 function
 
+def total_cards_for_21(cards):
+    pass
 
 
 # ======================================================================
