@@ -97,9 +97,12 @@ Card = namedtuple('Card',['suit','value','rank'])
 
 # TODO - write the create_card_deck function
 def create_card_deck():
+    global card_deck
     for x in range(len(SUITS)):
          for i in range(len(RANKS)):
-            card_deck.add(Card('Card',[SUITS[x],VALUES[i],RANKS[i]]))
+            adding_card = Card(SUITS[x],VALUES[i],RANKS[i])
+            card_deck.add(adding_card)
+
             
 
 
@@ -119,6 +122,9 @@ def create_card_deck():
 def shuffle_card_deck():
     global card_deck
     times = randint(1,52)
+    for i in range(0,times):
+        Oh_no = card_deck.pop()
+        card_deck.add(Oh_no)
 
     
 
@@ -129,7 +135,14 @@ def shuffle_card_deck():
 
 # TODO - write the deal_card_to_dealer function
 # TODO - write the deal_card_to_player function
-
+def deal_card_to_dealer():
+    global dealer_cards, card_deck
+    dealer_cards.append(card_deck.pop())
+    return
+def deal_card_to_player():
+    global player_cards, card_deck
+    player_cards.append(card_deck.pop())
+    return
 
 # ----------------------------------------------------------------------
 
@@ -168,8 +181,7 @@ def shuffle_card_deck():
 
 # TODO - write the total_cards_for_21 function
 
-def total_cards_for_21(cards):
-    pass
+
 
 
 # ======================================================================
