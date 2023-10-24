@@ -41,8 +41,8 @@ def reset_weekly_data():
     Both should be empty.
     '''
     global students_per_day, days_per_student
-    students_per_day = {}
-    days_per_student = {}
+    students_per_day.clear()
+    days_per_student.clear()
 
     # TODO - write this function's body
 
@@ -118,6 +118,14 @@ def print_attendance_report():
     print( 'attendance report\n' )
 
     # TODO - write code that prints the attendance report
+    for id in student_names.keys():
+        try:
+            string = f'{id} {student_names[id][1]} {student_names[id][0]}'
+        except:
+            print('')
+
+
+        print(string)
 
     print( '' )
 
