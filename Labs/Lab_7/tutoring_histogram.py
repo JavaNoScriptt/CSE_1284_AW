@@ -92,11 +92,22 @@ def print_day_histogram():
 
     returns: no return value
     '''
+    dictionary = ['Monday','Tuesday','Wednesday','Thursday', 'Friday']
 
     print( 'students per day\n' )
     
     # TODO - write code that prints the histogram
+    for day in dictionary:
+        if day in students_per_day:
+            string = str(day[0:3:]) +': '
+            for i in range(students_per_day[day]):
+                string += '#'
+            print(string)
+        else:
+            print(f'{str(day[0:3:])}: ')
+        
 
+        
     print( '' )
 
     return
@@ -116,16 +127,19 @@ def print_attendance_report():
     '''
 
     print( 'attendance report\n' )
-
+    
     # TODO - write code that prints the attendance report
-    for id in student_names.keys():
-        try:
-            string = f'{id} {student_names[id][1]} {student_names[id][0]}'
-        except:
-            print('')
+    for id in sorted(student_names.keys()):
+        if id in days_per_student:
+            name = f'{student_names[id][1]} {student_names[id][0]}'
+            print(f'{id:<5}  {name:<20} {days_per_student[id]}')
+        else:
+            name = f'{student_names[id][1]} {student_names[id][0]}'
+            print(f'{id:<5}  {name:<20} 0')
+            
 
 
-        print(string)
+        
 
     print( '' )
 

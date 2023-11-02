@@ -1,0 +1,47 @@
+# user data
+#
+# file format
+# each record contains
+#   userID
+#   firstName lastName
+#   several trusted IP addresses used by this user
+#   blank line
+
+pm81
+Pat Murphy
+4.56.178.240
+
+kw102
+Kayleigh Wickford
+27.126.210.5
+27.126.218.48
+
+ms581
+Marcus Smith
+47.230.100.72
+
+vi25
+Victoria Isling
+35.2.11.250
+
+js572
+Jiwan Singh
+35.2.11.78
+47.232.84.201
+
+oa118
+Olu Adebayo
+27.126.204.109
+102.214.15.92
+
+aj811
+Adam Jeffreys
+4.61.150.150
+4.70.2.88
+35.2.20.80
+
+mw456
+Mariam Wallis
+47.228.58.190
+23.99.250.71
+

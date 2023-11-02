@@ -128,3 +128,19 @@ Lab 5:
 
 Lab 6:
 
+
+
+
+
+Lab 7 :
+
+  Problem Statement: You will create an attendance report that shows how many days of tutoring each student in the class attended per week.
+                      You will also create a histogram that shows how many students came to tutoring each day of the week. 
+  
+  Notes:
+
+  There are only 4 functions that are needed to be written:
+
+  reset_weekely_data - empties the tudents_per_day and days_per_student dictionaries.
+
+  
