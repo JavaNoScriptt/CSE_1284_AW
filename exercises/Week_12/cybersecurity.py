@@ -3,7 +3,7 @@
 
 
 dict= {
-    user_name : [user_name, (Trusted_ips)]
+    user_name : [name, (Trusted_ips)]
 
 
 
