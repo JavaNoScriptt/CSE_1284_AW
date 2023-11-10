@@ -4,12 +4,18 @@ import time
 
 #Add Car class here
 class Car:
-    def __init__(self, driver, model='unknown'): self.driver, self.model, self.hits = driver, model, 0
-    def __str__(self): return f"{self.driver}\t{self.model}"
-    def get_driver(self): return self.driver
-    def get_model(self): return self.model
-    def get_hits(self): return self.hits
-    def add_hit(self): self.hits += 1
+    def __init__(self, driver, model='unknown'): 
+        self.driver, self.model, self.hits = driver, model, 0
+    def __str__(self): 
+        return f"{self.driver}\t{self.model}"
+    def get_driver(self):
+         return self.driver
+    def get_model(self): 
+        return self.model
+    def get_hits(self): 
+        return self.hits
+    def add_hit(self): 
+        self.hits += 1
 
 
 
